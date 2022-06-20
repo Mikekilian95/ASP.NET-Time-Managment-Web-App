@@ -1,0 +1,40 @@
+﻿@model PROG6212POE.Models.ModuleModel
+    
+@{
+    ViewData["Title"] = "AddModule";
+}
+
+<form action="/home/addmodule" method="post">
+
+    <div class="text-center">        
+        <h4>Please fill in the necessary information for a specific module</h4>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="ModuleCodeInput" class="form-label">Module Code</label>
+        <input type="text" class="form-control" id="ModuleCodeInput" asp-for="ModuleCode">
+    </div>
+
+    <div class="mb-3">
+        <label for="ModuleNameInput" class="form-label">Module Name</label>
+        <input type="text" class="form-control" id="ModuleNameInput" asp-for="ModuleName">
+    </div>
+
+    <div class="mb-3">
+        <label for="ModuleCreditsInput" class="form-label">Number of Credits</label>
+        <input type="number" class="form-control" id="ModuleCreditsInput" asp-for="Credits">
+    </div>
+
+    <div class="mb-3">
+        <label for="ClassHoursInput" class="form-label">Total Class Hours per week</label>
+        <input type="number" class="form-control" id="ClassHoursInput" asp-for="ClassHours">
+    </div>
+
+    <button type="submit"
+            class="btn btn-primary"
+            id="AddModule_Submit_Button">
+        Submit
+    </button>
+
+</form>

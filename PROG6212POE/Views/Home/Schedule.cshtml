@@ -1,0 +1,52 @@
+﻿@model PROG6212POE.Models.WeeklySchedule
+
+@{
+
+    ViewData["Title"] = "Schedule";
+
+}
+
+<form action="/home/schedule" method="post">
+
+    <div class="text-center">
+        <h3>Personal Schedule</h3>
+        <h4>Please choose a specific module for each day of the week </h4>
+    </div>
+
+    <div class="mb-3">
+        <label for="MondayModule" class="form-label">Monday:</label>
+        <input type="text" class="form-control" id="MondayModule" asp-for="MondayModule">
+    </div>
+
+    <div class="mb-3">
+        <label for="TuesdayModule" class="form-label">Tuesday:</label>
+        <input type="text" class="form-control" id="TuesdayModule" asp-for="TuesdayModule">
+    </div>
+
+    <div class="mb-3">
+        <label for="WednesdayModule" class="form-label">Wednesday:</label>
+        <input type="text" class="form-control" id="WednesdayModule" asp-for="WednesdayModule">
+    </div>
+
+    <div class="mb-3">
+        <label for="ThursdayModule" class="form-label">Thursday:</label>
+        <input type="text" class="form-control" id="ThursdayModule" asp-for="ThursdayModule">
+    </div>
+
+    <div class="mb-3">
+        <label for="FridayModule" class="form-label">Friday:</label>
+        <input type="text" class="form-control" id="FridayModule" asp-for="FridayModule">
+    </div>
+
+
+
+    <button type="submit"
+            class="btn btn-primary"
+            id="Schedule_Submit_Button">
+        Submit
+    </button>
+
+</form>
+
+
+

@@ -1,0 +1,38 @@
+﻿@model PROG6212POE.Models.HomeLogin
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Welcome to your Time Management Web Application!</h2>
+    <h2>Let's get started!</h2>
+    <h3>Please navigate via the tabs above and fill in the necessary information</h3>
+
+</div>
+
+
+<form action="/home/index" method="post">
+    <div class="text-center">
+        <h3>Register Below</h3>
+        <p>Please enter a username & password</p>
+    </div>
+
+    <div class="mb-3">
+        <label for="Username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="Username" asp-for="Username" >
+    </div>
+
+    <div class="mb-3">
+        <label for="Password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="Password" asp-for="Password" >
+    </div>
+
+    <button type="submit"
+            class="btn btn-primary"
+            id="Register_Submit_Button"
+            >
+        Register
+    </button>
+
+</form>

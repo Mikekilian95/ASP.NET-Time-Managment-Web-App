@@ -1,0 +1,36 @@
+﻿@model PROG6212POE.Models.SelfStudyModel
+    
+@{
+    ViewData["Title"] = "SelfStudyView";
+}
+
+<form action="/home/selfstudyview" method="post">
+
+    <div class="text-center">
+        <h4>Please fill in the necessary information for your self-study schedule</h4>
+    </div>
+
+    <div class="mb-3">
+        <label for="ChosenModule" class="form-label">Module Code</label>
+        <input type="text" class="form-control" id="ChosenModule" asp-for="ModuleChosen">
+    </div>
+
+    <div class="mb-3">
+        <label for="DateChosen" class="form-label">Please choose a date to work specifically on this module</label>
+        <input type="text" class="form-control" id="DateChosen" asp-for="DateChosen">
+    </div>
+
+    <div class="mb-3">
+        <label for="SelfStudyHours" class="form-label">How many hours do you want to work on the date chosen above</label>
+        <input type="number" class="form-control" id="SelfStudyHours" asp-for="StudyHours">
+    </div>
+
+
+
+    <button type="submit"
+            class="btn btn-primary"
+            id="SelfStudy_Submit_Button">
+        Submit
+    </button>
+
+</form>
